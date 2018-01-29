@@ -79,4 +79,42 @@
       </tbody>
     </table>
   </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Component Code</h6>
+<% code("html") do %>
+  <!-- Popout Basic -->
+  <popout-container class="popout__container">
+    <popout-trigger icon="help"></popout-trigger>
+    <popout-items-list popoutInverse="true">
+      <popout-list-header title="Order Overview"></popout-list-header>
+      <li>
+        <label>Fulfillment Date</label>
+        <p>{{ bakeryOrder.fulfillment_date | date:'M/d/y' }}</p>
+      </li>
+      <li>
+        <label>Fulfillment Method</label>
+        <p>{{ bakeryOrder.fulfillment_type | fulfillmentTypeName }}</p>
+      </li>
+      <li>
+        <label>Order Type</label>
+        <p>{{ bakeryOrder.order_customer_type | orderCustomerType }}</p>
+      </li>
+      <li>
+        <div [ngSwitch]="bakeryOrder.order_items.length">
+          <label>Order Items</label>
+          <ng-container *ngSwitchCase="0">None</ng-container>
+          <ul class="popout__sublist">
+            <ng-container *ngSwitchDefault>
+              <li class="popout__sublist-item" *ngFor="let orderItem of bakeryOrder.order_items">
+                <label class="form__label">Qty: {{ orderItem.quantity }}</label>
+                <p>{{ orderItem | orderItemName:{quantity: false} }}</p>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </li>
+    </popout-items-list>
+  </popout-container>
+<% end %><br/>
+  </div>
 </article>
