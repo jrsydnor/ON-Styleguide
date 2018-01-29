@@ -150,4 +150,65 @@
       </tbody>
     </table>
   </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Component Code</h6>
+<% code("html") do %>
+  <!-- Sample 1 -->
+  <ul gridRow>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+  </ul>
+
+  <!-- Sample 2 -->
+  <ul gridRow>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
+  </ul>
+
+  <!-- Sample 3 -->
+  <ul gridRow>
+    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
+    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
+  </ul>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Component Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a grid layout.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Component</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">gridRow</td>
+          <td class="table-guide__body-item">This should be applied to the element that contains a column layout. It sets a clearfix on the column layout and forces any content outside of the element below the floating columns. <% code("html") do %><div gridRow></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">gridCol s="#"</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the small viewport column layout. <% code("html") do %><div gridCol s="4"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">gridCol m="#"</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the medium viewport column layout. <% code("html") do %><div gridCol m="9"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">gridCol l="#"</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the large viewport column layout. <% code("html") do %><div gridCol l="12"></div><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </article>

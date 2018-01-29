@@ -17,6 +17,17 @@
       <li class="margin-bottom--charlie">
         <div class="card card--sm">Card text goes here.</div>
       </li>
+      <li class="card padding--reset margin-bottom--charlie">
+        <header class="padding-top--delta padding-left--delta padding-right--delta">
+          <h6 class="margin-reset--bottom">
+            Card title goes here
+          </h6>
+        </header>
+        <hr class="margin-reset--bottom">
+        <div class="padding--delta">
+          Card body content.
+        </div>
+      </li>
     </ul>
   </div>
   <div class="guide__section-group">
@@ -33,6 +44,19 @@
 
   <!-- Card Base Small -->
   <div class="card card--sm">Card text goes here.</div>
+
+  <!-- Titled Card -->
+  <div class="card padding--reset margin-bottom--charlie">
+    <header class="padding-top--delta padding-left--delta padding-right--delta">
+      <h6 class="margin-reset--bottom">
+        Card title goes here
+      </h6>
+    </header>
+    <hr class="margin-reset--bottom">
+    <div class="padding--delta">
+      Card body content.
+    </div>
+  </div>
 <% end %><br/>
   </div>
   <div class="guide__section-group">
@@ -59,6 +83,37 @@
         <tr>
           <td class="table-guide__body-item" style="width:30%">.card--sm</td>
           <td class="table-guide__body-item">Apply this modifier to the card element to change the padding.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Component Code</h6>
+    <% code("html") do %>
+    <!-- Titled Card -->
+    <titled-card title="Card title goes here">
+      <p data-card-body>
+        Card Body Text.
+      </p>
+    </titled-card>
+  <% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a card.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Component Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">titled-card</td>
+          <td class="table-guide__body-item">This should be applied to the card element you are styling to that has a title on it. <% code("html") do %><titled-card title="Card Title"></titled-card><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">data-card-body</td>
+          <td class="table-guide__body-item">This should be applied to the card element body content as a child element of a titled-card.<% code("html") do %><div data-card-body>Card Body Text</div><% end %></td>
         </tr>
       </tbody>
     </table>
