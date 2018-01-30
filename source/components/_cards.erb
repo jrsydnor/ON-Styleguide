@@ -44,19 +44,6 @@
 
   <!-- Card Base Small -->
   <div class="card card--sm">Card text goes here.</div>
-
-  <!-- Titled Card -->
-  <div class="card padding--reset margin-bottom--charlie">
-    <header class="padding-top--delta padding-left--delta padding-right--delta">
-      <h6 class="margin-reset--bottom">
-        Card title goes here
-      </h6>
-    </header>
-    <hr class="margin-reset--bottom">
-    <div class="padding--delta">
-      Card body content.
-    </div>
-  </div>
 <% end %><br/>
   </div>
   <div class="guide__section-group">
@@ -87,6 +74,25 @@
       </tbody>
     </table>
   </div>
+</article>
+<article  role="article" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Titled Cards</h3>
+    <p>Titled cards are used when a card has a text only title on the card followed by a line break.</p>
+  </div>
+  <div class="guide__section-group">
+    <div class="card padding--reset margin-bottom--charlie">
+      <header class="padding-top--delta padding-left--delta padding-right--delta">
+        <h6 class="margin-reset--bottom">
+          Card title goes here
+        </h6>
+      </header>
+      <hr class="margin-reset--bottom">
+      <div class="padding--delta">
+        Card body content.
+      </div>
+    </div>
+  </div>
   <div class="guide__section-group">
     <h6 class="label">Sample Component Code</h6>
     <% code("html") do %>
@@ -100,10 +106,10 @@
   </div>
   <div class="guide__section-group">
     <h6 class="label">Angular Component Guidelines</h6>
-    <p>This table gives you a quick overview of the CSS classes that can be applied to create a card.</p>
+    <p>This table gives you a quick overview of the attributes that can be applied to create a titled card.</p>
     <table class="table-guide">
       <thead class="table-guide__head">
-        <th class="table-guide__head-item">Selector</th>
+        <th class="table-guide__head-item">Attribute</th>
         <th class="table-guide__head-item">Usage</th>
       </thead>
       <tbody class="table-guide__body">
@@ -113,7 +119,16 @@
         </tr>
         <tr>
           <td class="table-guide__body-item" style="width:30%">data-card-body</td>
-          <td class="table-guide__body-item">This should be applied to the card element body content as a child element of a titled-card.<% code("html") do %><div data-card-body>Card Body Text</div><% end %></td>
+          <td class="table-guide__body-item">
+            This should be applied to the child element of a titled-card to define the body card content.
+            <% code("html") do %><div data-card-body>Card Body Text</div><% end %><br>
+
+            This should be applied as a container when the titled-card has multiple children.
+            <% code("html") do %>
+            <ng-container data-card-body>
+              <div gridRow>Card Body Text</div>
+              <div gridRow>Card Body Text</div>
+            </ng-container><% end %></td>
         </tr>
       </tbody>
     </table>
