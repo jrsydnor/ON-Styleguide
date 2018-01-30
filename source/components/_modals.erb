@@ -43,7 +43,7 @@
       <div class="modal__container">
         <div class="modal__body">
           <a href="#" role="button" class="modal__close">
-            <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+            <%= inline_svg("images/icons/icons-functional/icon-close.svg", class: "modal__trigger") %>
           </a>
           <header class="modal__header">
             <h3 class="title">Modal Title</h3>
@@ -54,10 +54,10 @@
             <div class="modal__actions">
               <ul class="modal__actions-list">
                 <li class="modal__actions-item">
-                  <a href="#" class="link--delta">Close</a>
+                  <button class="button--default button--full modal__close">Cancel</button>
                 </li>
                 <li class="modal__actions-item">
-                  <button class="button--charlie">Button Text</button>
+                  <button class="button--danger button--full">Delete</button>
                 </li>
               </ul>
             </div>
@@ -79,7 +79,7 @@
       <tbody class="table-guide__body">
         <tr>
           <td class="table-guide__body-item" style="width:30%">.modal__trigger</td>
-          <td class="table-guide__body-item">Add this class the element that opens or launches the modal. <% code("html") do %><button class="button--bravo modal__trigger"></button><% end %></td>
+          <td class="table-guide__body-item">Add this class the element that opens or launches the modal. <% code("html") do %><button class="button--secondary modal__trigger"></button><% end %></td>
         </tr>
         <tr>
           <td class="table-guide__body-item" style="width:30%">.modal</td>
@@ -96,14 +96,6 @@
         <tr>
           <td class="table-guide__body-item" style="width:30%">.modal__body-header</td>
           <td class="table-guide__body-item">This class should be added to the header element. The header element should contain a description of what the modal is going to be used for. <% code("html") do %><header class="modal__header"></header><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal__body-footer</td>
-          <td class="table-guide__body-item">This class can be applied to the element that contains the modal actions. <% code("html") do %><footer class="modal__body-footer"> <!-- Content --> </footer><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal__body-footer-action</td>
-          <td class="table-guide__body-item">This class can be applied to the element that is actionable. <% code("html") do %><a class="modal__body-footer-action">Cancel</a><% end %></td>
         </tr>
       </tbody>
     </table>
