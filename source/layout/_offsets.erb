@@ -56,25 +56,25 @@
     <h4 class="content-section__label">Sample Code</h4>
 <% code("html") do %>
   <!-- Sample 1 -->
-  <ul class="row">
-    <li class="columns-1__l offset-1__l">1</li>
-    <li class="columns-1__l offset-1__l">1</li>
-    <li class="columns-1__l offset-1__l">1</li>
-    <li class="columns-1__l offset-1__l">1</li>
-    <li class="columns-1__l offset-1__l">1</li>
-    <li class="columns-1__l offset-1__l">1</li>
+  <ul gridRow>
+    <li gridCol l="1" class="offset-1__l">1</li>
+    <li gridCol l="1" class="offset-1__l">1</li>
+    <li gridCol l="1" class="offset-1__l">1</li>
+    <li gridCol l="1" class="offset-1__l">1</li>
+    <li gridCol l="1" class="offset-1__l">1</li>
+    <li gridCol l="1" class="offset-1__l">1</li>
   </ul>
 
   <!-- Sample 2 -->
-  <ul class="row">
-    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
-    <li class="columns-3__m offset-3__m columns-4__l offset-4__l">4 Lg / 3 Md </li>
+  <ul gridRow>
+    <li gridCol m="3" l="4">4 Lg / 3 Md</li>
+    <li gridCol m="3" l="4" class="offset-3__m offset-4__l">4 Lg / 3 Md </li>
   </ul>
 
   <!-- Sample 3 -->
-  <ul class="row">
-    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
-    <li class="columns-1__s offset-1__s columns-3__l offset-3__l">3 Lg / 1 Sm</li>
+  <ul gridRow>
+    <li gridCol s="2" l="6">6 Lg / 2 Sm</li>
+    <li gridCol s="1" l="3" class="offset-1__s offset-3__l">3 Lg / 1 Sm</li>
   </ul>
 <% end %><br/>
   </div>
