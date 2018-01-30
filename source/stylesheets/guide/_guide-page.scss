@@ -76,6 +76,8 @@ $guide-section-header-margin:         $spacer-charlie;
   @include media($large) {
     @include span-columns(3 of 12);
     @include shift(1 of 12);
+    position: sticky;
+    top: 115px;
   }
 }
 
