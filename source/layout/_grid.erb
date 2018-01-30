@@ -76,7 +76,7 @@
     </div>
   </div>
   <div class="guide__section-group">
-    <h6 class="label">Sample Code</h6>
+    <h6 class="label">Sample Component Code</h6>
 <% code("html") do %>
   <!-- Varibles -->
   $small: Viewport with min-width of 320px
@@ -89,32 +89,32 @@
   $column: Width is 65px
 
   <!-- Sample 1 -->
-  <ul class="row">
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
-    <li class="columns-1__l">1</li>
+  <ul gridRow>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
+    <li gridCol s="4" m="9" l="1">1</li>
   </ul>
 
   <!-- Sample 2 -->
-  <ul class="row">
-    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
-    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
-    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
+  <ul gridRow>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
+    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
   </ul>
 
   <!-- Sample 3 -->
-  <ul class="row">
-    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
-    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
+  <ul gridRow>
+    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
+    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
   </ul>
 <% end %><br/>
   </div>
@@ -123,7 +123,7 @@
     <p>This table gives you a quick overview of the CSS classes that can be applied to create a grid layout.</p>
     <table class="table-guide">
       <thead class="table-guide__head">
-        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Class Name/Attribute</th>
         <th class="table-guide__head-item">Usage</th>
       </thead>
       <tbody class="table-guide__body">
@@ -131,67 +131,6 @@
           <td class="table-guide__body-item" style="width:25%">.container</td>
           <td class="table-guide__body-item">This should be applied to the element you want to set the max-width of the view on. Very rarely used in Roundup. <% code("html") do %><div class"container"></div><% end %></td>
         </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:25%">.row</td>
-          <td class="table-guide__body-item">This should be applied to the element that contains a column layout. It sets a clearfix on the column layout and forces any content outside of the element below the floating columns. <% code("html") do %><div class"row"></div><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__s</td>
-          <td class="table-guide__body-item">This should be applied to the element you want to take on the small viewport column layout. <% code("html") do %><div class"columns-4__s"></div><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__m</td>
-          <td class="table-guide__body-item">This should be applied to the element you want to take on the medium viewport column layout. <% code("html") do %><div class"columns-9__m"></div><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__l</td>
-          <td class="table-guide__body-item">This should be applied to the element you want to take on the large viewport column layout. <% code("html") do %><div class"columns-12__l"></div><% end %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="guide__section-group">
-    <h6 class="label">Angular Component Code</h6>
-<% code("html") do %>
-  <!-- Sample 1 -->
-  <ul gridRow>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-    <li gridCol s="4" m="9" l="1">1</li>
-  </ul>
-
-  <!-- Sample 2 -->
-  <ul gridRow>
-    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
-    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
-    <li gridCol s="4" m="3" l="4">4 Lg / 3 Md</li>
-  </ul>
-
-  <!-- Sample 3 -->
-  <ul gridRow>
-    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
-    <li gridCol s="2" m="9" l="6">6 Lg / 2 Sm</li>
-  </ul>
-<% end %><br/>
-  </div>
-  <div class="guide__section-group">
-    <h6 class="label">Angular Component Guidelines</h6>
-    <p>This table gives you a quick overview of the CSS classes that can be applied to create a grid layout.</p>
-    <table class="table-guide">
-      <thead class="table-guide__head">
-        <th class="table-guide__head-item">Selector</th>
-        <th class="table-guide__head-item">Usage</th>
-      </thead>
-      <tbody class="table-guide__body">
         <tr>
           <td class="table-guide__body-item" style="width:25%">gridRow</td>
           <td class="table-guide__body-item">This should be applied to the element that contains a column layout. It sets a clearfix on the column layout and forces any content outside of the element below the floating columns. <% code("html") do %><div gridRow></div><% end %></td>
