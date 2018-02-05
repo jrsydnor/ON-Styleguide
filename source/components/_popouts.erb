@@ -22,83 +22,62 @@
     </div>
   </div>
   <div class="guide__section-group">
-    <h6 class="label">Sample Code</h6>
+    <h6 class="label">Sample Component Code</h6>
 <% code("html") do %>
-  <!-- Popout Basic -->
-  <div class="popout__container">
-    <a href="#" class="popout__trigger link--primary">Popout Trigger</a>
-    <figure class="popout">
-      <ul class="popout__list">
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-      </ul>
-    </figure>
-  </div>
+  <popout-container class="popout__container">
+    <popout-trigger icon="more"></popout-trigger>
+    <popout-items-list>
+      <popout-list-item>
+        Popout Link
+      </popout-list-item>
+      <popout-list-item>
+        Popout Link
+      </popout-list-item>
+      <popout-list-item>
+        Popout Link
+      </popout-list-item>
+    </popout-items-list>
+  </popout-container>
 <% end %><br/>
   </div>
   <div class="guide__section-group">
-    <h6 class="label">HTML Guidelines</h6>
-    <p>This table gives you a quick overview of the CSS classes that can be applied to create a popout.</p>
+    <h6 class="label">Angular Component Guidelines</h6>
+    <p>This table gives you a quick overview of the Attributes/CSS classes that can be applied to create a popout.</p>
     <table class="table-guide">
       <thead class="table-guide__head">
-        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Attribute/Class Name</th>
         <th class="table-guide__head-item">Usage</th>
       </thead>
       <tbody class="table-guide__body">
         <tr>
+          <td class="table-guide__body-item" style="width:30%">popout-container</td>
+          <td class="table-guide__body-item">The popout container should be applied to the parent element of the popout. It sets the positioning and creates a wrapper for the popout to display in.</td>
+        </tr>
+        <tr>
           <td class="table-guide__body-item" style="width:30%">.popout__container</td>
-          <td class="table-guide__body-item">The popout container class should be applied to the parent element of the popout. It sets the positioning and creates a wrapper for the popout to display in. <% code("html") do %><div class"popout__container"></div><% end %></td>
+          <td class="table-guide__body-item">The popout container class should be applied to the parent element of the popout. It sets the positioning and creates a wrapper for the popout to display in. <% code("html") do %><popout-container class"popout__container"></popout-container><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.popout__trigger</td>
-          <td class="table-guide__body-item">Apply this class to the element that is being clicked to activate the popout element. This class could be applied to an anchor or button. Depending on the element you apply this class to, you should then use the button or link styles to style the element correctly. <% code("html") do %><a href="#" class="popout__trigger link--primary">Popout Trigger</a><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">popout-trigger</td>
+          <td class="table-guide__body-item">The popout trigger should be applied to the element that is being clicked to activate the popout element. This class could be applied to an anchor or button.</td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.popout</td>
-          <td class="table-guide__body-item">Apply this class to the popout element. It is styled similar to a card and inherits from the card component. <% code("html") do %><div class="popout"> <!-- Popout content --> </div><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">icon=""</td>
+          <td class="table-guide__body-item">Apply this to define the icon of the element that is being clicked to activate the popout element.<% code("html") do %><popout-trigger icon="more"></popout-trigger><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.popout__list</td>
-          <td class="table-guide__body-item">Apply to the unordered list element. <% code("html") do %><ul class="popout__list"> <!-- Popout list --> </ul><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">popout-items-list</td>
+          <td class="table-guide__body-item">Apply this as the container of the popout list items<% code("html") do %><popout-items-list> <!-- Popout list --> </popout-items-list><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.popout__item</td>
-          <td class="table-guide__body-item">Apply to the list element. <% code("html") do %><li class="popout__item"> <!-- Popout list --> </li><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">popoutInverse="true"</td>
+          <td class="table-guide__body-item">Apply this modifier to the popout element to make it appear above the popout trigger rather than below it. <% code("html") do %><popout-items-list popoutInverse="true"> <!-- Popout Inverse Content --> </div><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.popout--inverse</td>
-          <td class="table-guide__body-item">Apply this modifier to the popout element to make it appear above the popout trigger rather than below it. <% code("html") do %><div class="popout popout--inverse"> <!-- Popout Inverse Content --> </div><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">popout-list-item</td>
+          <td class="table-guide__body-item">Apply to the item in the list element. <% code("html") do %><popout-list-item> <!-- Popout list item --> </popout-list-item><% end %></td>
         </tr>
       </tbody>
     </table>
-  </div>
-  <div class="guide__section-group">
-    <h6 class="label">Sample Component Code</h6>
-<% code("html") do %>
-  <!-- Popout Basic -->
-  <div class="popout__container">
-    <a href="#" class="popout__trigger link--primary">Popout Trigger</a>
-    <figure class="popout">
-      <ul class="popout__list">
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-        <li class="popout__item">
-          <a href="#" class="popout__link">Popout Link</a>
-        </li>
-      </ul>
-    </figure>
-  </div>
-<% end %><br/>
   </div>
 </article>
