@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Middleman Gems
 gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer', '~> 2.7'
-gem 'middleman-livereload', '~> 3.1.0'
+gem "middleman-livereload", "~> 3.4.3"
 gem 'middleman-syntax'
 gem 'middleman-minify-html'
 gem 'middleman-sprockets'
