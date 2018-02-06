@@ -13,11 +13,10 @@
               <%= inline_svg("images/icons/icons-functional/icon-close.svg", class: 'modal__trigger') %>
             <% end %>
             <header class="modal__header">
-              <h3 class="title">Modal Title</h3>
-              <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+              <h3 class="title">Are you sure about this?</h3>
+              <p class="modal-intro">You are about to delete {{ user.name }}. Once the employee is deleted, they will no longer be able to access the system. This action cannot be undone. Please be sure this is an action you want to take.</p>
             </header>
             <div>
-              <p class="modal-content">Modal Content goes here.</p>
               <div class="modal__actions">
                 <ul class="modal__actions-list">
                   <li class="modal__actions-item">
@@ -50,7 +49,7 @@
     <p>This table gives you a quick overview of the CSS classes that can be applied to create a modal.</p>
     <table class="table-guide">
       <thead class="table-guide__head">
-        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Attribute/Class Name</th>
         <th class="table-guide__head-item">Usage</th>
       </thead>
       <tbody class="table-guide__body">
@@ -59,20 +58,16 @@
           <td class="table-guide__body-item">Add this class the element that opens or launches the modal. <% code("html") do %><button class="button--secondary modal__trigger"></button><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal</td>
-          <td class="table-guide__body-item">Add to element that contains the modal. <% code("html") do %><div class="modal"></div><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">modal</td>
+          <td class="table-guide__body-item">This is the container of the modal. <% code("html") do %><modal></modal><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal__overlay</td>
-          <td class="table-guide__body-item">This class should be added to the first child element of the modal. It should also wrap the modal content. <% code("html") do %><div class="modal__overlay"></div><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">title=""</td>
+          <td class="table-guide__body-item">This is the selector that should be used to define the title of the modal or the modal header. <% code("html") do %>title="Are you sure about this?"<% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal__body</td>
-          <td class="table-guide__body-item">Add to the element that contains the content of the modal. <% code("html") do %><div class="modal__body"></div><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:30%">.modal__body-header</td>
-          <td class="table-guide__body-item">This class should be added to the header element. The header element should contain a description of what the modal is going to be used for. <% code("html") do %><header class="modal__header"></header><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">intro=""</td>
+          <td class="table-guide__body-item">This is the selector that should be used to define the content in the modal <% code("html") do %>intro="You are about to delete {{ user.name }}. Once the employee is deleted, they will no longer be able to access the system. This action cannot be undone. Please be sure this is an action you want to take."<% end %></td>
         </tr>
       </tbody>
     </table>
