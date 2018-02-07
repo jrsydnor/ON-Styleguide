@@ -8,6 +8,7 @@
       <label class="tooltip__label label">Need Help</label>
       <%= inline_svg("images/icons/icons-functional/icon-help.svg", class: "tooltip__icon") %>
       <figure class="tooltip">
+        <p class="tooltip__title"><b>This is the right place</b></p>
         <p class="tooltip__text">Need help with something? Read this message for more details about the feature / issue.</p>
       </figure>
     </div>
@@ -15,43 +16,32 @@
   <div class="guide__section-group">
     <h6 class="label">Sample Code</h6>
 <% code("html") do %>
-  <div class="tooltip__item">
-    <label class="tooltip__label label">Need Help</label>
-    <%= inline_svg("images/icons/icons-functional/icon-help.svg", class: "tooltip__icon") %>
-    <figure class="tooltip">
-      <p class="tooltip__text">Need help with something? Read this message for more details.</p>
-    </figure>
-  </div>
+  <tooltip
+    label="Need help"
+    title="This is the right place"
+    text="Need help with something? Read this message for more details about the feature / issue."></tooltip>
 <% end %><br/>
   </div>
   <div class="guide__section-group">
-    <h6 class="label">HTML Guidelines</h6>
-    <p>This table gives you a quick overview of the CSS classes that can be applied to create a tooltip.</p>
+    <h6 class="label">Component Guidelines</h6>
+    <p>This table gives you a quick overview of the attribute that can be applied to create a tooltip.</p>
     <table class="table-guide">
       <thead class="table-guide__head">
-        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Attribute</th>
         <th class="table-guide__head-item">Usage</th>
       </thead>
       <tbody class="table-guide__body">
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.tooltip__item</td>
-          <td class="table-guide__body-item">Apply this class to the parent wrapper. <% code("html") do %><div class"tooltip__item"></div><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">tooltip</td>
+          <td class="table-guide__body-item">Apply this to the parent wrapper. <% code("html") do %><tooltip></tooltip><% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.tooltip__label</td>
-          <td class="table-guide__body-item">Apply this class to the label that sits inside of the tooltip item. <% code("html") do %><label class"tooltip__label label"> <!-- Label text --> </label><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">label=""</td>
+          <td class="table-guide__body-item">Apply this to define the label of the tooltip that the user would need more information about. This is the part that the user can see without hovering over the help icon.<% code("html") do %>label="Need help"<% end %></td>
         </tr>
         <tr>
-          <td class="table-guide__body-item" style="width:30%">.tooltip__icon</td>
-          <td class="table-guide__body-item">Apply this class to the svg so that the icon fill is correct. <% code("html") do %> <svg width="14" height="14" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" class="tooltip__icon"><title>icon</title><path d="M12.143 7c0-2.84-2.303-5.143-5.143-5.143S1.857 4.16 1.857 7 4.16 12.143 7 12.143 12.143 9.84 12.143 7zm1.714 0c0 3.787-3.07 6.857-6.857 6.857C3.213 13.857.143 10.787.143 7 .143 3.213 3.213.143 7 .143c3.787 0 6.857 3.07 6.857 6.857zM8 10c0 .553-.447 1-1 1-.553 0-1-.447-1-1 0-.553.447-1 1-1 .553 0 1 .447 1 1zm-.143-3c0 .473-.384.857-.857.857S6.143 7.473 6.143 7V4c0-.473.384-.857.857-.857s.857.384.857.857v3z" fill="#ADBEC5" fill-rule="nonzero" id="app-icon"></path></svg><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:30%">.tooltip</td>
-          <td class="table-guide__body-item">Apply this class to the element that wraps the tooltip content. <% code("html") do %><figure class="tooltip"> <!-- Tooltip --> </figure><% end %></td>
-        </tr>
-        <tr>
-          <td class="table-guide__body-item" style="width:30%">.tooltip__text</td>
-          <td class="table-guide__body-item">Apply this class to the element inside the tooltip that contains the tooltip content. <% code("html") do %><p class="tooltip__content"> <!-- Tooltip content --> </p><% end %></td>
+          <td class="table-guide__body-item" style="width:30%">text=""</td>
+          <td class="table-guide__body-item">Apply this to define the text that the tooltip should display. <% code("html") do %>text="Need help with something? Read this message for more details about the feature / issue."<% end %></td>
         </tr>
       </tbody>
     </table>
